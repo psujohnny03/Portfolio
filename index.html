@@ -7,6 +7,7 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <link rel="stylesheet" href="stylesheet.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">    
 </head>
 
 <body>
@@ -15,10 +16,10 @@
             <a href="#" class="brand-logo">Welcome</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li>
-                    <a href="sass.html">Projects</a>
+                    <a href="#projects">Projects</a>
                 </li>
                 <li>
-                    <a href="badges.html">About</a>
+                    <a href="#aboutme">About Me</a>
                 </li>
             </ul>
         </div>
@@ -29,12 +30,14 @@
         </div>
     </div>
 
-    <div class = "languages">
-    <h4>Hi, I'm John Garber.  I am a Front End Web Developer from beautiful South Bay California.
-        Continue on below to learn more.....
-    </h4>
-    <h3><p>Languages and Programs I am certified in</p></h3>
-        </div>
+    <div class="languages">
+        <h4>Hi, I'm John Garber. I am a Front End Web Developer from beautiful South Bay California. Continue on below to learn
+            more...
+        </h4>
+        <h3>
+            <p>Languages and Programs I am certified in</p>
+        </h3>
+    </div>
 
     <div class="carousel">
         <a class="carousel-item" href="#one!">
@@ -47,14 +50,46 @@
             <img src="http://www.websnube.com/wp-content/uploads/2016/07/jquery-icon.png">
         </a>
         <a class="carousel-item" href="#four!">
-            <img src="https://i2.wp.com/smalljacky.com/wp-content/uploads/2015/01/0b7a6aa92e819975b22b1c186ed40ff0.png?resize=484%2C252&ssl=1">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/CSS.3.svg/2000px-CSS.3.svg.png">
         </a>
         <a class="carousel-item" href="#five!">
             <img src="https://assets.pcmag.com/media/images/430018-adobe-photoshop-express-for-iphone.png?width=333&height=245">
         </a>
     </div>
 
-    <footer class="page-footer">
+    <div class="languages">
+        <h3>
+            <p>Universities and schools I attended to learn programming</p>
+        </h3>
+    </div>
+
+    <div class="centered">
+        <img class="mySlides" src="https://realtucson.com/wp-content/uploads/2013/06/University-Arizona1.jpg">
+        <img class="mySlides" src="https://destinysolutions.com/wp-content/uploads/2016/07/penn_state_logo_detail.png">
+        <img class="mySlides" src="https://beachcoders.com/wp-content/uploads/2016/04/beach-coders-logo-web.png">
+        <img class="mySlides" src="http://assets.gradreports.com/assets/school_logos/harrisburg_area_c_c.png">
+        <img class="mySlides" src="https://static1.squarespace.com/static/54cc191ce4b0f886f4762582/t/5a20a7b753450a77d2f02ce0/1512089365044/Pima+Community+College?format=750w">
+        <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+    </div>
+
+        <hr>
+    <div class="about" id="aboutme">
+        <h3>About Me</h3>
+        <hr>
+        <div class="abouttext">
+            <p> John was born and raised in Pennsylvania and found a love for coding at a young age. He was also an avid gamer
+                and began developing and designing maps for multiplayer action video games. In college, he majored in Electrical
+                and Computer Engineering. In 2004 he moved out west to attend The University of Arizona and a few years later
+                found a place to call home in California. He has a passion for music and enjoys playing guitar and singing in his
+                own Rock N' Roll band, "Always Trust John." After working in the Mobile Phone Industry for 5 years as a B2B
+                Manager, he started attending various coding camps to continue his education with hopes of becoming a Software
+                Developer.
+            </p>
+        </div>
+    </div>
+
+    <footer class="page-footer" id="projects">
         <div class="container">
             <div class="row">
                 <div class="col l6 s12">
@@ -97,6 +132,23 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 
     <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            if (n > x.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = x.length };
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
+
+
         $(document).ready(function () {
             $('.parallax').parallax();
         });
