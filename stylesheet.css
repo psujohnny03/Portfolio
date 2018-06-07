@@ -22,7 +22,8 @@ nav {
     font-size: larger;
 }
 body {
-    background-image: url("https://wallpapertag.com/wallpaper/full/c/3/d/305549-computer-background-2560x1600-for-samsung-galaxy.jpg");
+    background-image: url("http://hirevic.com/wp-content/uploads/2013/05/ab.jpg");
+    background-image: cover;
 }
 .carousel img {
     height: 200px;
